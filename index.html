@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mile to KM Converte {DavCode}</title>
+    <link rel="stylesheet" href="css/mile-converte.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link
+      rel="shortcut icon"
+      href="/images/DavCode-Logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="title">Mile to KM Converter</div>
+
+    <!-- Displays bacground converted number  -->
+    <div class="background">Mile to KM Converter</div>
+
+    <!-- Main Cnverter  -->
+    <div class="main-container">
+      <div class="wrapper">
+        <div class="display">to KM</div>
+        <div class="input">
+          <input type="text" placeholder="Enter a Number" />
+        </div>
+        <button onclick="convert()">Convert</button>
+      </div>
+    </div>
+
+    <!-- DavCode Logo -->
+    <img src="/images/DavCode-Logo-3.png" class="davcode-logo" />
+
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="HeitsGraphics" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting, if you love my work by me a coffee" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+   <!-- JavaScript Code -->
+    <script>
+      /* Mile to KM Converter */
+      function convert() {
+        let displayed = document.querySelector(".display");
+        let background = document.querySelector(".background");
+        let inputed = document.querySelector("input").value;
+
+        let miles = inputed;
+        let kilometers = miles * 1.609344;
+
+        displayed.innerHTML = kilometers + "km";
+        displayed.style.background = " #cca8bb6b";
+        background.innerHTML = kilometers + "km";
+      }
+    </script>
+  </body>
+</html>
